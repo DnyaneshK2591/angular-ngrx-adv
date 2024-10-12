@@ -2,7 +2,9 @@
   <div class="container">
     <ng-container *ngFor="let item of products$">
       <li>
-        <app-product-card [product]="item"></app-product-card>
+        <app-product-card
+          [product]="item"
+          (handleAdd)="addItemToCart($event)"></app-product-card>
       </li>
     </ng-container>
   </div>
