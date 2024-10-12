@@ -5,15 +5,13 @@ import { Product } from '../models/Product.model';
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
-  styleUrls: ['./products.component.scss']
+  styleUrls: ['./products.component.scss'],
 })
 export class ProductsComponent {
-  products$ :any[];
+  products$: any[];
   constructor(private productsService: ProductsService) {}
   ngOnInit(): void {
     this.getProducts();
-
-
   }
   getProducts() {
     this.productsService.fetchProducts().subscribe(data => {
