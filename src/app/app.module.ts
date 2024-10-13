@@ -14,6 +14,7 @@ import { StoreModule } from '@ngrx/store';
 import { cartReducer } from './states/cart/cart.reducer';
 import { NavBarComponent } from './shared/nav-bar/nav-bar.component';
 import { MatIconModule } from '@angular/material/icon';
+import { MatDividerModule } from '@angular/material/divider';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { MatIconModule } from '@angular/material/icon';
     MatButtonModule,
     MatToolbarModule,
     MatIconModule,
+    MatDividerModule,
     StoreModule.forRoot({ cart: cartReducer }),
   ],
   providers: [],

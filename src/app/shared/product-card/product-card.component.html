@@ -4,27 +4,33 @@
       <div class="numberCircle">{{ product.id }}</div>
       <div class="container-price">
         <mat-card-title class="title">{{ product.title }}</mat-card-title>
-        <mat-card-subtitle>{{ product.price }}</mat-card-subtitle>
+        <mat-card-subtitle class="price"
+          >₹ {{ product.price }}</mat-card-subtitle
+        >
       </div>
     </div>
   </mat-card-header>
   <img
     mat-card-image
+    class="container-image"
     src="{{ product.image }}"
-    height="200px"
-    width="200px"
     alt="Photo of a Shiba Inu" />
+
   <mat-card-content>
     <p style="height: 100px">
       {{ product.description }}
     </p>
   </mat-card-content>
   <mat-card-actions class="container-button">
-    <button mat-fab extended (click)="addToCart(product)">
+    <button
+      mat-fab
+      extended
+      class="cart-button-green"
+      (click)="addToCart(product)">
       <mat-icon>add</mat-icon>
       ADD PRODUCT
     </button>
-    <button mat-fab extended>
+    <button mat-fab extended class="cart-button-orange">
       <mat-icon>delete</mat-icon>
       REMOVE
     </button>
