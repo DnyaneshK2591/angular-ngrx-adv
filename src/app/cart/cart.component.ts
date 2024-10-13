@@ -10,5 +10,6 @@ import { Store } from '@ngrx/store';
 })
 export class CartComponent {
   cartItems$ = this.store.select(selectCartProducts);
+  
   constructor(private store: Store<AppState>) {}
 }

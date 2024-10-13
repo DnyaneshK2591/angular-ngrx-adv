@@ -1,0 +1,11 @@
+<mat-toolbar class="main-nav" color="primary">
+    <div class="nav-heading">
+      <h1>| Angular Shopping Cart Application |</h1>
+    </div>
+    <div class="nav-view">
+      <button mat-fab extended routerLink="/cart">
+        <mat-icon>shopping_cart</mat-icon>
+        Cart :: {{ (product$ | async)?.length }}
+      </button>
+    </div>
+  </mat-toolbar>
