@@ -3,7 +3,9 @@
     <h1>| Angular Shopping Cart Application |</h1>
   </div>
   <div class="nav-view">
-    <button mat-button routerLink="cart">Cart :: {{(product$ | async)?.length}}</button>
+    <button mat-button routerLink="cart">
+      Cart :: {{ (product$ | async)?.length }}
+    </button>
   </div>
 </mat-toolbar>
 

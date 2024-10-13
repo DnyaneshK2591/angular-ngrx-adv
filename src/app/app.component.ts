@@ -12,8 +12,8 @@ import { selectCartProducts } from './states/cart/cart.selector';
 })
 export class AppComponent {
   title = 'angular-ngrx-adv';
-  product$:Observable<Product[]>;
-  constructor(private store: Store<AppState>){
+  product$: Observable<Product[]>;
+  constructor(private store: Store<AppState>) {
     this.product$ = this.store.select(selectCartProducts);
   }
 }

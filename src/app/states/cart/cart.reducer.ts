@@ -4,7 +4,7 @@ import * as CartActions from './cart.action';
 
 export interface CartState {
   products: Product[];
-  totalPrice?:number
+  totalPrice?: number;
 }
 
 export const initialCounterState: CartState = {
@@ -21,15 +21,17 @@ export const cartReducer = createReducer(
     };
   }),
 
-  on(CartActions.incrementProduct, (state,{productId})=>{
-    const updateProduct = state.products.map((product)=>product.id===productId ? product.quantity++ :  product);
-    return{
-        ...state
+  on(CartActions.incrementProduct, (state, { productId }) => {
+    const updateProduct = state.products.map(product =>
+      product.id === productId ? product.quantity++ : product
+    );
+    return {
+      ...state,
     };
   }),
 
   on(CartActions.decrementProduct, (state, { productId }) => {
-    const updatedProducts = state.products.map((product) =>
+    const updatedProducts = state.products.map(product =>
       product.id === productId
         ? { ...product, quantity: product.quantity - 1 }
         : product
@@ -42,11 +44,11 @@ export const cartReducer = createReducer(
 
   on(CartActions.removeItem, (state, { productId }) => {
     const updatedProducts = state.products.filter(
-      (product) => product.id !== productId
+      product => product.id !== productId
     );
     return {
       ...state,
       products: updatedProducts,
     };
-  }),
+  })
 );

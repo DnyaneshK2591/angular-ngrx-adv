@@ -25,6 +25,6 @@ export class ProductsComponent {
   }
 
   addItemToCart(product: Product) {
-    this.store.dispatch(addToCart({product}));
+    this.store.dispatch(addToCart({ product }));
   }
 }

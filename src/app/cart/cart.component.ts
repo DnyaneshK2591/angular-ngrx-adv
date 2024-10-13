@@ -9,8 +9,6 @@ import { Store } from '@ngrx/store';
   styleUrls: ['./cart.component.scss'],
 })
 export class CartComponent {
-  cartItems$ = this.store.select(selectCartProducts)
-  constructor(private store:Store<AppState>){
-
-  }
+  cartItems$ = this.store.select(selectCartProducts);
+  constructor(private store: Store<AppState>) {}
 }
