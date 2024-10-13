@@ -1,6 +1,5 @@
-.container {
-  border: 10px solid yellow;
 
+.container {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
@@ -11,4 +10,7 @@
 }
 ul {
   list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  border: 10px solid rgb(215, 243, 5);
 }
